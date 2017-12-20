@@ -41,6 +41,7 @@ export class AuthedApp extends React.Component<any, any> {
   render() {
     const uiStore = this.props[Stores.UI_STATE] as UiStateStore;
     const showLoading = uiStore.bootingState !== BootingState.FINISHED;
+    const screenJsx = showLoading ? null : <Screens />;
 
     // This is kind of not nice. Not sure how to make better. i guess this should be a component
     // rather than a container. Keep the componentDidMount stuff.
@@ -66,7 +67,7 @@ export class AuthedApp extends React.Component<any, any> {
             />
           </SidebarBottomContainer>
         </Sidebar>
-        <Screens />
+        {screenJsx}
       </Fragment>
     );
   }
