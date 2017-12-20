@@ -1,3 +1,3 @@
-export * from './Home';
+export * from './AuthedApp';
 export * from './Login';
 export * from './Logout';

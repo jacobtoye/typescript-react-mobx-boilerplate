@@ -8,10 +8,10 @@ import {
 
 import { withAuthorization } from 'components';
 import { Routes, Stores } from 'enums';
-import { Home, Login, Logout } from 'containers';
+import { AuthedApp, Login, Logout } from 'containers';
 import { AuthStore } from 'stores';
 
-const AuthedHome = withAuthorization(Home);
+const AuthedAuthedApp = withAuthorization(AuthedApp);
 
 @inject(Stores.AUTH)
 @withRouter
@@ -26,7 +26,7 @@ export default class App extends React.Component<any, any> {
         <Switch>
           <Route path={Routes.LOGIN} component={Login} />
           <Route path={Routes.LOGOUT} component={Logout} />
-          <Route path="/" component={() => <AuthedHome isLoggedIn={authStore.isLoggedIn} />} />
+          <Route path="/" component={() => <AuthedAuthedApp isLoggedIn={authStore.isLoggedIn} />} />
         </Switch>
       </div>
     );
