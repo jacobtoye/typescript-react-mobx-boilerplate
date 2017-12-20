@@ -19,6 +19,16 @@ export const Home: React.SFC<HomeProps> = ({ showLoading }) => {
     <Fragment>
       <AppLoading visible={showLoading} />
       <Sidebar title="MAH BERLERPLERT">
+        <SidebarNavItem
+          key={Routes.HOME}
+          to={Routes.HOME}
+          text="Home"
+        />
+        <SidebarNavItem
+          key={Routes.PROFILE}
+          to={Routes.PROFILE}
+          text="Profile"
+        />
         <SidebarBottomContainer>
           <SidebarNavItem
             key={Routes.LOGOUT}
