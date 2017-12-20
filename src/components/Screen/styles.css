@@ -1,0 +1,7 @@
+.screen {
+  border: none;
+  box-sizing: border-box;
+  flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
+}

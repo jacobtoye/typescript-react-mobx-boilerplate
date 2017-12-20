@@ -1,0 +1,18 @@
+@import "../variables.css";
+
+.screen-header {
+  border-bottom: 2px solid var(--neutralColor);
+  margin: var(--rowHeight) 0 0;
+
+  &.clear-bottom-margin {
+    margin-bottom: 0;
+  }
+
+  & h1 {
+    color: var(--darkTextColor);
+    font-size: var(--titleTextSize);
+    font-weight: var(--titleFontWeight);
+    line-height: calc(var(--rowHeight) * 2);
+    margin: 0 var(--columnWidth) calc(var(--rowHeight) - 3px);
+  }
+}

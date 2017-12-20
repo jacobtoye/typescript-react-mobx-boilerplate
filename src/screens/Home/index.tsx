@@ -1,7 +1,12 @@
 import * as React from 'react';
 
+import {
+  Screen,
+  ScreenHeader,
+} from 'components';
+
 export interface HomeProps {
-  /* empty */
+  name: string;
 }
 
 export interface HomeState {
@@ -11,7 +16,9 @@ export interface HomeState {
 export class Home extends React.Component<HomeProps, HomeState> {
   render() {
     return (
-      <div>Home</div>
+      <Screen>
+        <ScreenHeader text={`Welcome home ${this.props.name}`} />
+      </Screen>
     );
   }
 }

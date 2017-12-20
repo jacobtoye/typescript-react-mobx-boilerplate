@@ -10,8 +10,9 @@ import { RouterStore } from 'mobx-react-router';
 
 import { withAuthorization } from 'components';
 import { Routes, Stores } from 'enums';
-import { Home, Profile } from 'screens';
+import { Profile } from 'screens';
 import { AuthStore } from 'stores';
+import { Home } from './Home';
 
 const AuthedHome = withAuthorization(Home);
 const AuthedProfile = withAuthorization(Profile);
