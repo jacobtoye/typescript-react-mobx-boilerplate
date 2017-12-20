@@ -1,0 +1,26 @@
+@import "../variables.css";
+
+.app-loading {
+  align-items: center;
+  background-color: var(--darkBackgroundColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  & .label {
+    color: var(--lightTextColor);
+    font-size: var(--subTitleTextSize);
+    font-weight: var(--bodyFontWeight);
+    line-height: var(--rowHeight);
+    margin-top: var(--rowHeight);
+    text-align: center;
+    width: 100%;
+  }
+}

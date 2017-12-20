@@ -1,0 +1,13 @@
+@import "./components/variables.css";
+
+html,
+body {
+  font-family: var(--baseFont);
+  margin: 0;
+
+  & .app {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}

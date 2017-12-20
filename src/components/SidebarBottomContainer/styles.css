@@ -1,0 +1,5 @@
+.sidebar-bottom-container {
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 1;
+}

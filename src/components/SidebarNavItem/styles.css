@@ -1,0 +1,44 @@
+@import "../variables.css";
+
+.sidebar-nav-item {
+  color: #a1a1a1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--rowHeight) 0;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    color: var(--lightTextColor);
+  }
+
+  &.active {
+    color: var(--lightTextColor);
+  }
+
+  & .nav-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(var(--rowHeight) * 3);
+
+    & div {
+      background-color: transparent;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.active .nav-icon div,
+  &:hover .nav-icon div {
+    background-position: 50% 100%;
+  }
+
+  & .nav-text {
+    font-size: var(--bodyTextSize);
+    font-weight: var(--bodyFontWeight);
+    line-height: var(--rowHeight);
+    text-align: center;
+  }
+}

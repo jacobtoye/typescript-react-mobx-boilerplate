@@ -1,0 +1,34 @@
+/* Grid */
+
+:root {
+  --columnWidth: 56px;
+  --baselineHeight: 8px;
+  --rowHeight: 24px;
+
+  /* Fonts */
+  --baseFont: 'Montserrat', sans-serif;
+  --titleTextSize: 20px;
+  --titleFontWeight: 300;
+  --subTitleTextSize: 16px;
+  --subTitleFontWeight: 400;
+  --bodyTextSize: 14px;
+  --bodyFontWeight: 400;
+  --bodyLightTextSize: 14px;
+  --bodyLightFontWeight: 300;
+  --detailTextSize: 10px;
+  --detailFontWeight: 400;
+  --productNameTextSize: 12px;
+  --productNameFontWeight: 400;
+  --inputSuperTextTextSize: 12px;
+  --inputSuperTextFontWeight: 400;
+  --inputTextSize: 16px;
+  --inputFontWeight: 400;
+
+  /* Colors */
+  --accentColor: #08ce94;
+  --darkBackgroundColor: #2e2f40;
+  --disabledColor: #ccc;
+  --lightBackgroundColor: #fff;
+  --lightTextColor: #fff;
+  --darkTextColor: #545454;
+}

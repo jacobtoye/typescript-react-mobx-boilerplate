@@ -1,0 +1,38 @@
+@import "../variables.css";
+
+.button {
+  background-color: var(--accentColor);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+  color: var(--lightTextColor);
+  cursor: pointer;
+  font: var(--baseFont);
+  font-size: var(--subTitleTextSize);
+  font-weight: var(--subTitleFontWeight);
+  line-height: calc(var(--rowHeight) * 2);
+  min-width: calc(var(--columnWidth) * 3);
+  outline: none;
+  padding: 0 var(--rowHeight);
+  will-change: box-shadow;
+  transition:
+    box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    background-color: var(--disabledColor);
+  }
+}

@@ -1,0 +1,32 @@
+@import "../variables.css";
+
+.sidebar {
+  background-color: var(--darkBackgroundColor);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: calc(var(--columnWidth) * 5);
+  padding: 0 var(--columnWidth);
+  width: calc(var(--columnWidth) * 5);
+
+  & .title-container {
+    align-items: center;
+    display: flex;
+    height: calc(var(--rowHeight) * 4);
+    justify-content: center;
+    margin: 0 0 var(--rowHeight);
+
+    & h1 {
+      color: var(--accentColor);
+      display: inline-block;
+      font-size: var(--productNameTextSize);
+      font-weight: var(--productNameFontWeight);
+      line-height: calc(var(--baselineHeight) * 2);
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      width: 75%;
+    }
+  }
+}
