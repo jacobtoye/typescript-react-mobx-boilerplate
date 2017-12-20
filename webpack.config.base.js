@@ -13,6 +13,7 @@ module.exports = function () {
         'node_modules'
       ],
       alias: {
+        api: path.resolve(__dirname, 'src/api'),
         components: path.resolve(__dirname, 'src/components'),
         constants: path.resolve(__dirname, 'src/constants'),
         containers: path.resolve(__dirname, 'src/containers'),

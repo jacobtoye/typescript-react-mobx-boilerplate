@@ -20,6 +20,7 @@
     ],
     "baseUrl": "./",
     "paths": {
+      "api": ["src/api"],
       "components": ["src/components"],
       "constants/*": ["src/constants/*"],
       "containers": ["src/containers"],
