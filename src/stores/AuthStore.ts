@@ -2,13 +2,19 @@ import { observable, action, runInAction } from 'mobx';
 import { RouterStore } from 'mobx-react-router';
 
 import { Routes } from 'enums';
+import {
+  UiStateStore,
+  UserStore,
+} from 'stores';
 
 export class AuthStore {
   @observable
   public isLoggedIn: boolean = false;
 
-  constructor(routerStore) {
+  constructor(routerStore, uiStateStore, userStore) {
     this.routerStore = routerStore;
+    this.uiStateStore = uiStateStore;
+    this.userStore = userStore;
 
     const localStorageIsLoggedIn = localStorage.getItem('isLoggedIn');
     if (localStorageIsLoggedIn)
@@ -16,6 +22,8 @@ export class AuthStore {
   }
 
   private routerStore: RouterStore;
+  private uiStateStore: UiStateStore;
+  private userStore: UserStore;
 
   @action.bound
   login() {
@@ -28,6 +36,10 @@ export class AuthStore {
 
   @action.bound
   logout() {
+    this.userStore.clear();
+
+    this.uiStateStore.reset();
+
     localStorage.removeItem('isLoggedIn');
     this.isLoggedIn = false;
   }

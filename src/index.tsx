@@ -20,9 +20,9 @@ useStrict(true);
 // prepare MobX stores
 const browserHistory = createBrowserHistory();
 const routingStore = new RouterStore();
-const authStore = new AuthStore(routingStore);
 const uiStateStore = new UiStateStore();
 const userStore = new UserStore();
+const authStore = new AuthStore(routingStore, uiStateStore, userStore);
 
 const stores = {
   [Stores.AUTH]: authStore,

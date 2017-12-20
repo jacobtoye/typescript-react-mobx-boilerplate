@@ -16,6 +16,11 @@ export class UserStore {
       this.user = user;
     });
   }
+
+  @action.bound
+  clear() {
+    this.user = null;
+  }
 }
 
 export default UserStore;
