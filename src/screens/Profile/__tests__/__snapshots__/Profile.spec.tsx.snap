@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile should render correctly 1`] = `
+<Component>
+  <Component
+    text="Look a profile screen o.O"
+  />
+</Component>
+`;

@@ -11,6 +11,37 @@
     "api": "node --inspect api/server.js",
     "test": "jest --watchAll"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/__mocks__/requestAnimationFrame.js",
+      "<rootDir>/test-setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styles.js",
+      "^components(.*)$": "<rootDir>/src/components/$1",
+      "^containers(.*)$": "<rootDir>/src/containers/$1",
+      "^enums(.*)$": "<rootDir>/src/enums/$1",
+      "^models(.*)$": "<rootDir>/src/models/$1",
+      "^screens(.*)$": "<rootDir>/src/screens/$1",
+      "^stores(.*)$": "<rootDir>/src/stores/$1"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx|js)"
+    ],
+    "testResultsProcessor": "jest-teamcity-reporter"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "mobx": "^3.4.1",
